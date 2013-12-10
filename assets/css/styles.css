@@ -1,0 +1,174 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background: #f8f0e8;
+  font-size: 18px;
+  letter-spacing: 1.5px; }
+
+main {
+  margin: 0 auto; }
+
+header {
+  position: absolute; }
+
+h1 {
+  font-size: 80px;
+  color: #333;
+  padding-top: 100px; }
+
+h2 {
+  font-size: 70px;
+  color: #bfbdbc;
+  font-weight: 200;
+  padding: 100px 0 50px; }
+
+h3 {
+  width: 400px;
+  margin: 0 auto;
+  font-size: 45px;
+  color: #333;
+  font-style: italic; }
+
+h4 {
+  font-size: 22px;
+  color: #87a6a3;
+  text-transform: uppercase;
+  padding-top: 140px; }
+
+h5 {
+  position: relative;
+  top: 45px;
+  left: 60px;
+  font-size: 70px;
+  float: left; }
+
+h6 {
+  font-size: 35px;
+  color: #bfbdbc;
+  margin: 15px 0 0 50px;
+  font-weight: lighter; }
+
+.masthead {
+  position: relative;
+  background-image: url(../images/brands.png);
+  background-repeat: repeat;
+  min-width: 1340px;
+  height: 770px; }
+
+.center-piece {
+  position: absolute;
+  background: #fff;
+  width: 480px;
+  height: 450px;
+  border-radius: 50%;
+  text-align: center;
+  top: 105px;
+  left: 50%;
+  margin-left: -240px; }
+  .center-piece:after {
+    content: "";
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -47px;
+    height: 99px;
+    width: 95px;
+    background-image: url(../images/glasses.png); }
+
+.carousels {
+  height: 600px;
+  background: #333; }
+
+.contact-us {
+  height: 950px;
+  background-image: url(../images/contactBackground.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center; }
+  .contact-us p {
+    font-size: 16px;
+    color: #3d3d3d; }
+
+.location {
+  height: 700px;
+  text-align: center; }
+  .location .business-card {
+    position: relative;
+    height: 300px;
+    width: 670px;
+    background: #fff;
+    margin: 0 auto; }
+    .location .business-card span {
+      position: absolute; }
+    .location .business-card .bubble {
+      height: 100px;
+      width: 100px;
+      background: #5f7a95;
+      border-radius: 50%;
+      top: -20px;
+      right: 50px;
+      z-index: 5;
+      line-height: 100px; }
+      .location .business-card .bubble a {
+        color: #fff;
+        text-transform: uppercase; }
+    .location .business-card p {
+      position: absolute;
+      width: 240px;
+      font-size: 22px;
+      text-align: left;
+      text-transform: uppercase;
+      bottom: 60px; }
+    .location .business-card .address {
+      left: 60px;
+      color: #7f7f7f;
+      font-weight: 600; }
+    .location .business-card .contact-info {
+      right: 0;
+      color: #97889c; }
+      .location .business-card .contact-info a {
+        color: #5f7a95; }
+    .location .business-card .border-top {
+      top: 0;
+      left: 0;
+      height: 20px;
+      width: 670px;
+      background: #faf7b1;
+      z-index: 4; }
+    .location .business-card .border-left {
+      left: 0;
+      top: 0;
+      height: 300px;
+      width: 20px;
+      background: #87a6a3;
+      z-index: 3; }
+    .location .business-card .border-bottom {
+      bottom: 0;
+      left: 0;
+      height: 20px;
+      width: 670px;
+      background: #75685f;
+      z-index: 2; }
+    .location .business-card .border-right {
+      right: 0;
+      top: 0;
+      height: 300px;
+      width: 20px;
+      background: #97889c;
+      z-index: 1; }
+
+.map {
+  height: 550px;
+  background-image: url(../images/mapimage.jpg);
+  background-size: cover; }
+
+footer {
+  height: 60px; }
+  footer li {
+    display: inline;
+    font-size: 18px;
+    padding: 0 40px 0 30px;
+    line-height: 60px;
+    text-transform: uppercase; }
