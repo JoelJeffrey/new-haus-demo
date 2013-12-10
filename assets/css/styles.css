@@ -15,14 +15,16 @@ header {
 
 h1 {
   font-size: 80px;
-  color: #333;
-  padding-top: 100px; }
+  color: #414141;
+  padding-top: 100px;
+  letter-spacing: 1;
+  font-weight: normal; }
 
 h2 {
   font-size: 70px;
   color: #bfbdbc;
   font-weight: 200;
-  padding: 100px 0 50px; }
+  padding: 100px 0 70px; }
 
 h3 {
   width: 400px;
@@ -82,14 +84,83 @@ h6 {
   background: #333; }
 
 .contact-us {
-  height: 950px;
-  background-image: url(../images/contactBackground.jpg);
+  height: 830px;
+  background: url(../images/contactbackground.jpg) no-repeat;
   background-size: cover;
-  background-repeat: no-repeat;
   text-align: center; }
   .contact-us p {
     font-size: 16px;
-    color: #3d3d3d; }
+    color: #3d3d3d;
+    margin-bottom: 80px;
+    font-style: italic; }
+  .contact-us .feedback-container {
+    margin: 0 auto;
+    width: 680px; }
+    .contact-us .feedback-container input {
+      font-size: 18px;
+      padding-left: 20px;
+      border: none; }
+    .contact-us .feedback-container .name {
+      color: #de7d6d;
+      float: left;
+      height: 70px;
+      width: 310px;
+      margin-bottom: 40px;
+      box-shadow: 6px 6px 0 rgba(206, 128, 115, 0.75); }
+      .contact-us .feedback-container .name::-webkit-input-placeholder {
+        color: #ce8073;
+        letter-spacing: 1.5px; }
+    .contact-us .feedback-container .personal-contact {
+      float: right;
+      height: 70px;
+      width: 310px;
+      box-shadow: 6px 6px 0 rgba(134, 123, 116, 0.75);
+      color: #867b74; }
+      .contact-us .feedback-container .personal-contact::-webkit-input-placeholder {
+        color: #867b74;
+        letter-spacing: 1.5px; }
+    .contact-us .feedback-container .feedback {
+      width: 660px;
+      height: 180px;
+      margin-bottom: 80px;
+      box-shadow: 6px 6px 0 rgba(66, 66, 66, 0.75);
+      padding: 20px 0 0 20px;
+      border: none;
+      resize: none;
+      color: #333; }
+      .contact-us .feedback-container .feedback::-webkit-input-placeholder {
+        color: #333;
+        font-size: 16px;
+        letter-spacing: -1px; }
+  .contact-us button {
+    position: relative;
+    padding: 8px 50px 8px 30px;
+    border-radius: 50px;
+    background: rgba(33, 33, 33, 0.6);
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: inline; }
+  .contact-us span:after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fff;
+    right: 5px;
+    top: 5px; }
+  .contact-us .arrow-right {
+    position: absolute;
+    right: 13px;
+    bottom: 12px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #de7d6d; }
 
 .location {
   height: 700px;
@@ -114,7 +185,7 @@ h6 {
       .location .business-card .bubble a {
         color: #fff;
         text-transform: uppercase; }
-    .location .business-card p {
+    .location .business-card .card {
       position: absolute;
       width: 240px;
       font-size: 22px;

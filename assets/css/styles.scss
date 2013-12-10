@@ -15,14 +15,16 @@ header {
 }
 h1 {
 	font-size: 80px;
-	color: #333;
+	color: #414141;
 	padding-top: 100px;
+	letter-spacing: 1;
+	font-weight: normal;
 }
 h2 {
 	font-size: 70px;
 	color: #bfbdbc;
 	font-weight: 200;
-	padding: 100px 0 50px;
+	padding: 100px 0 70px;
 }
 h3 {
 	width: 400px;
@@ -49,7 +51,7 @@ h6 {
 	color: #bfbdbc;
 	margin: 15px 0 0 50px;
 	font-weight: lighter;
-}
+}	
 .masthead {
 	position: relative;
 	background-image: url(../images/brands.png);
@@ -83,14 +85,94 @@ h6 {
 	background: #333;
 }
 .contact-us {
-	height: 950px;
-	background-image: url(../images/contactBackground.jpg);
+	height: 830px;
+	background: url(../images/contactbackground.jpg) no-repeat;
 	background-size: cover;
-	background-repeat: no-repeat;
 	text-align: center;
 	p {
 		font-size: 16px;
 		color: #3d3d3d;
+		margin-bottom: 80px;
+		font-style: italic;
+	}
+	.feedback-container {
+		margin: 0 auto;
+		width: 680px;
+		input {
+			font-size: 18px;
+			padding-left: 20px;
+			border: none;
+		}
+		.name {
+			color: #de7d6d;
+			float: left; 
+			height: 70px;
+			width: 310px;
+			margin-bottom: 40px;
+			box-shadow: 6px 6px 0 rgba(206, 128, 115, 0.75);
+			&::-webkit-input-placeholder {
+				color: rgb(206, 128, 115);
+				letter-spacing: 1.5px;
+			}
+		}
+		.personal-contact {
+			float: right;
+			height: 70px;
+			width: 310px;
+			box-shadow: 6px 6px 0 rgba(134, 123, 116, 0.75);
+			color: rgb(134, 123, 116);
+			&::-webkit-input-placeholder {
+				color: rgb(134, 123, 116);
+				letter-spacing: 1.5px;
+			}
+		}
+		.feedback {
+			width: 660px;
+			height: 180px;
+			margin-bottom: 80px;
+			box-shadow: 6px 6px 0 rgba(66, 66, 66, 0.75);
+			padding: 20px 0 0 20px;
+			border: none;
+			resize: none;
+			color: #333;
+			&::-webkit-input-placeholder {
+				color: #333;
+				font-size: 16px;
+				letter-spacing: -1px;
+			}
+		}
+	}
+	button {
+		position: relative;
+		padding: 8px 50px 8px 30px;
+		border-radius: 50px;
+		background: rgba(33, 33, 33, 0.6);
+		border: none;
+		color: #fff;
+		font-size: 20px;
+		letter-spacing: 1.5px;
+		text-transform: uppercase;
+		display: inline;
+	}
+	span:after {
+		content: "";
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		background: #fff;
+		right: 5px;
+		top: 5px;
+	}
+	.arrow-right {
+		position: absolute;
+		right: 13px;
+		bottom: 12px;
+		width: 0; 
+		height: 0; 
+		border-top: 8px solid transparent;
+		border-bottom: 8px solid transparent;
+		border-left: 8px solid #de7d6d;
 	}
 }
 .location {
@@ -119,7 +201,7 @@ h6 {
 				text-transform: uppercase;
 			}
 		}
-		p {
+		.card {
 			position: absolute;
 			width: 240px;
 			font-size: 22px;
