@@ -3,12 +3,7 @@
   margin: 0; }
 
 body {
-  background: #f8f0e8;
-  font-size: 18px;
-  letter-spacing: 1.5px; }
-
-main {
-  margin: 0 auto; }
+  background: #f8f0e8; }
 
 header {
   position: absolute; }
@@ -17,7 +12,6 @@ h1 {
   font-size: 80px;
   color: #414141;
   padding-top: 100px;
-  letter-spacing: 1;
   font-weight: normal; }
 
 h2 {
@@ -80,36 +74,73 @@ h6 {
     background-image: url(../images/glasses.png); }
 
 .carousels {
-  height: 600px;
-  background: #333; }
-  .carousels .cycle-slideshow {
+  height: 600px; }
+  .carousels article {
     position: relative;
-    padding: 0;
-    margin: 0;
-    display: inline-block;
-    width: 25%;
     height: 100%;
-    text-align: center; }
-    .carousels .cycle-slideshow:nth-child(1) {
-      background: #97889c; }
-    .carousels .cycle-slideshow:nth-child(2) {
-      background: #faf7b1; }
-    .carousels .cycle-slideshow h2 {
+    display: inline-block;
+    margin-left: -4px; }
+    .carousels article h2 {
+      padding: 0;
       font-size: 30px;
+      margin: 20px 0 0 30px; }
+    .carousels article .purple {
+      color: #97889c; }
+    .carousels article .brown {
+      color: #75685f; }
+    .carousels article img {
+      position: relative;
+      top: 20px; }
+    .carousels article .caption {
       position: absolute;
-      left: 30px;
-      top: 10px;
-      padding: 0; }
+      top: 333px;
+      left: 0;
+      right: 0;
+      margin: 0 auto; }
+  .carousels h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 30px;
+    text-decoration: underline; }
+  .carousels p {
+    font-size: 16px;
+    color: #97889c; }
+  .carousels .press {
+    width: 25%;
+    background: #97889c; }
+    .carousels .press p {
+      color: #75685f; }
+    .carousels .press .cycle-pager {
+      color: #75685f; }
+  .carousels .awards {
+    width: 25%;
+    background: #faf7b1; }
+    .carousels .awards h3 {
+      color: #83776f; }
+    .carousels .awards .cycle-pager {
+      color: #97889c; }
+  .carousels .testimonials {
+    width: 50%;
+    background: #75685f;
+    padding-right: 4px; }
+    .carousels .testimonials .cycle-pager {
+      color: #97889c; }
+  .carousels .cycle-slideshow {
+    float: left;
+    height: 85%;
+    background-color: transparent;
+    width: 100%; }
     .carousels .cycle-slideshow .panel {
-      padding: 100px 0 0 40px; }
-  .carousels .large {
-    width: 49%;
-    background: #75685f; }
-  .carousels .cycle-pager {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    margin-left: -10px; }
+      height: 100%;
+      width: 100%;
+      text-align: center; }
+    .carousels .cycle-slideshow .cycle-pager {
+      width: 100%;
+      position: absolute;
+      bottom: -10px;
+      text-align: center;
+      letter-spacing: 3px;
+      font-size: 30px; }
 
 .contact-us {
   height: 830px;
@@ -120,14 +151,16 @@ h6 {
     font-size: 16px;
     color: #3d3d3d;
     margin-bottom: 80px;
-    font-style: italic; }
+    font-style: italic;
+    letter-spacing: 1.5px; }
   .contact-us .feedback-container {
     margin: 0 auto;
     width: 680px; }
     .contact-us .feedback-container input {
       font-size: 18px;
       padding-left: 20px;
-      border: none; }
+      border: none;
+      letter-spacing: 1.5px; }
     .contact-us .feedback-container .name {
       color: #de7d6d;
       float: left;
@@ -169,10 +202,11 @@ h6 {
     font-size: 20px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    display: inline; }
+    display: inline;
+    outline: none; }
     .contact-us button a {
-      text-decoration: none;
-      color: #fff; }
+      color: #fff;
+      text-decoration: none; }
   .contact-us span:after {
     content: "";
     position: absolute;
