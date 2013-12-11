@@ -83,12 +83,33 @@ h6 {
   height: 600px;
   background: #333; }
   .carousels .cycle-slideshow {
+    position: relative;
     padding: 0;
+    margin: 0;
     display: inline-block;
-    width: 33%;
-    height: 100%; }
-    .carousels .cycle-slideshow img {
-      width: 100%; }
+    width: 25%;
+    height: 100%;
+    text-align: center; }
+    .carousels .cycle-slideshow:nth-child(1) {
+      background: #97889c; }
+    .carousels .cycle-slideshow:nth-child(2) {
+      background: #faf7b1; }
+    .carousels .cycle-slideshow h2 {
+      font-size: 30px;
+      position: absolute;
+      left: 30px;
+      top: 10px;
+      padding: 0; }
+    .carousels .cycle-slideshow .panel {
+      padding: 100px 0 0 40px; }
+  .carousels .large {
+    width: 49%;
+    background: #75685f; }
+  .carousels .cycle-pager {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -10px; }
 
 .contact-us {
   height: 830px;
@@ -173,7 +194,8 @@ h6 {
 
 .location {
   height: 700px;
-  text-align: center; }
+  text-align: center;
+  padding-bottom: 60px; }
   .location .business-card {
     position: relative;
     height: 300px;
@@ -196,15 +218,17 @@ h6 {
         text-transform: uppercase; }
     .location .business-card .card {
       position: absolute;
-      width: 240px;
+      width: 260px;
       font-size: 22px;
       text-align: left;
       text-transform: uppercase;
       bottom: 60px; }
     .location .business-card .address {
       left: 60px;
-      color: #7f7f7f;
-      font-weight: 600; }
+      color: #333;
+      font-weight: 600;
+      font-style: normal;
+      letter-spacing: 1.5px; }
     .location .business-card .contact-info {
       right: 0;
       color: #97889c; }
@@ -240,9 +264,10 @@ h6 {
       z-index: 1; }
 
 .map {
-  height: 550px;
-  background-image: url(../images/mapimage.jpg);
-  background-size: cover; }
+  height: 550px; }
+  .map iframe {
+    width: 100%;
+    height: 100%; }
 
 footer {
   height: 60px; }
@@ -256,6 +281,10 @@ footer {
       color: #788ba0; }
     footer ul li:nth-child(2) {
       color: #d57058; }
+    footer ul li:nth-child(4) {
+      color: #a597a7; }
+    footer ul li:nth-child(5) {
+      color: #a49a92; }
   footer ul span {
     position: relative;
     bottom: 2px;
