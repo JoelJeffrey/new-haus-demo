@@ -3,6 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="assets/css/styles.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="http://malsup.github.com/jquery.cycle2.js"></script>
 </head>
 <body>
 	<header>
@@ -17,8 +19,32 @@
 	</section>
 	<section class="carousels">
 	<!-- Cycle 1 -->
+		<div class="cycle-slideshow"
+		 	data-cycle-fx="scrollHorz"
+		 >
+		    <img src="http://jquery.malsup.com/cycle2/images/p1.jpg">
+		    <img src="http://jquery.malsup.com/cycle2/images/p2.jpg">
+		    <img src="http://jquery.malsup.com/cycle2/images/p3.jpg">
+		    <img src="http://jquery.malsup.com/cycle2/images/p4.jpg">
+		</div>
 	<!-- cycle 2 -->
+		<div class="cycle-slideshow"
+ 			data-cycle-fx="scrollHorz"
+		>
+		    <img src="http://jquery.malsup.com/cycle2/images/p1.jpg">
+		    <img src="http://jquery.malsup.com/cycle2/images/p2.jpg">
+		    <img src="http://jquery.malsup.com/cycle2/images/p3.jpg">
+		    <img src="http://jquery.malsup.com/cycle2/images/p4.jpg">
+		</div>
 	<!-- cycle 3 -->
+		<div class="cycle-slideshow"
+			 data-cycle-fx="scrollHorz"
+		>
+		    <img src="http://jquery.malsup.com/cycle2/images/p1.jpg">
+		    <img src="http://jquery.malsup.com/cycle2/images/p2.jpg">
+		    <img src="http://jquery.malsup.com/cycle2/images/p3.jpg">
+		    <img src="http://jquery.malsup.com/cycle2/images/p4.jpg">
+		</div>
 	</section>
 	<section class="contact-us">
 		<h1>Can We Talk About It?</h1>
@@ -29,7 +55,7 @@
 			<textarea class="feedback" placeholder="Give us an idea about your project"></textarea>
 		</div>
 		<button>
-		  <span>submit</span><div class="arrow-right"></div>
+		  <a href="#"><span>submit</span><div class="arrow-right"></div></a>
 		</button>
 	</section>
 	<section class="location">
@@ -64,12 +90,12 @@
 	<footer>
 		<nav>
 			<ul>
-				<li>Our work</li>
-				<li>The skinny</li>
-				<li>Hire us</li>
-				<li>Culture</li>
-				<li>Careers</li>
-				<!-- Social Media Buttons -->
+				<li><a class="first-child" href="#">Our work</a><span>>></span></li>
+				<li><a class="second-child" href="#">The skinny</a><span>>></span></li>
+				<li><a class="third-child" href="#">Hire us</a></li>
+				<li><a class="fourth-child" href="#">Culture</a><span>>></span></li>
+				<li><a class="fifth-child" href="#">Careers</a><span>>></span></li>
+				<img src="assets/images/social.png" alt="social media buttons">
 			</ul>
 		</nav>
 	</footer>

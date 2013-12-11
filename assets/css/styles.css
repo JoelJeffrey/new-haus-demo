@@ -82,6 +82,13 @@ h6 {
 .carousels {
   height: 600px;
   background: #333; }
+  .carousels .cycle-slideshow {
+    padding: 0;
+    display: inline-block;
+    width: 33%;
+    height: 100%; }
+    .carousels .cycle-slideshow img {
+      width: 100%; }
 
 .contact-us {
   height: 830px;
@@ -138,11 +145,13 @@ h6 {
     border-radius: 50px;
     background: rgba(33, 33, 33, 0.6);
     border: none;
-    color: #fff;
     font-size: 20px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     display: inline; }
+    .contact-us button a {
+      text-decoration: none;
+      color: #fff; }
   .contact-us span:after {
     content: "";
     position: absolute;
@@ -237,9 +246,37 @@ h6 {
 
 footer {
   height: 60px; }
-  footer li {
+  footer ul li {
     display: inline;
-    font-size: 18px;
-    padding: 0 40px 0 30px;
+    font-size: 20px;
+    padding: 0 60px 0 40px;
     line-height: 60px;
     text-transform: uppercase; }
+    footer ul li:nth-child(1) {
+      color: #788ba0; }
+    footer ul li:nth-child(2) {
+      color: #d57058; }
+  footer ul span {
+    position: relative;
+    bottom: 2px;
+    font-size: 10px;
+    padding-left: 10px;
+    letter-spacing: -1px; }
+  footer .first-child {
+    color: #d57058;
+    text-decoration: underline; }
+  footer .second-child {
+    color: #a7bab5; }
+  footer .third-child {
+    color: #333;
+    text-decoration: none;
+    background: #ffffff;
+    padding: 20px;
+    font-weight: 400; }
+  footer .fourth-child {
+    color: #5f7a95; }
+  footer .fifth-child {
+    color: #bfbdbc; }
+  footer img {
+    float: right;
+    padding: 20px; }

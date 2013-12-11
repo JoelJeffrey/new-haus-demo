@@ -83,6 +83,15 @@ h6 {
 .carousels {
 	height: 600px;
 	background: #333;
+	.cycle-slideshow {
+		padding: 0;
+		display: inline-block;
+		width: 33%;
+		height: 100%;
+		img {
+		width: 100%; 
+		}
+	}
 }
 .contact-us {
 	height: 830px;
@@ -148,11 +157,14 @@ h6 {
 		border-radius: 50px;
 		background: rgba(33, 33, 33, 0.6);
 		border: none;
-		color: #fff;
 		font-size: 20px;
 		letter-spacing: 1.5px;
 		text-transform: uppercase;
 		display: inline;
+		a {
+			text-decoration: none;
+			color: #fff;
+		}
 	}
 	span:after {
 		content: "";
@@ -263,11 +275,53 @@ h6 {
 }
 footer {
 	height: 60px;
-	li {
-		display: inline;
-		font-size: 18px;
-		padding: 0 40px 0 30px;
-		line-height: 60px;
-		text-transform: uppercase;
+	ul {
+		li {
+			display: inline;		
+			font-size: 20px;
+			padding: 0 60px 0 40px;
+			line-height: 60px;
+			text-transform: uppercase;
+			&:nth-child(1) {
+				color: #788ba0;
+			}
+			&:nth-child(2) {
+				color: #d57058;
+			}
+			&:nth-child(4) {
+
+			}
+		}
+		span {
+			position: relative;
+			bottom: 2px;
+			font-size: 10px;
+			padding-left: 10px;
+			letter-spacing: -1px;
+		}
+	}
+	.first-child {
+		color: #d57058;
+		text-decoration: underline;
+	}
+	.second-child {
+		color: #a7bab5;
+	}
+	.third-child {
+		color: #333;
+		text-decoration: none;
+		background: #ffffff;
+		padding: 20px;
+		font-weight: 400;
+	}
+	.fourth-child {
+		color: #5f7a95;
+	}
+	.fifth-child {
+		color: #bfbdbc;
+	}
+	img {
+		float: right;
+		padding: 20px;
 	}
 }
