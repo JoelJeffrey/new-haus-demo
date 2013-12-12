@@ -1,5 +1,6 @@
 $purple: #97889c;
 $brown: #75685f;
+$grey: #bfbdbc;
 
 * {
 	padding: 0;
@@ -19,14 +20,14 @@ h1 {
 }
 h2 {
 	font-size: 70px;
-	color: #bfbdbc;
+	color: $grey;
 	font-weight: 200;
 	padding: 100px 0 70px;
 }
 h3 {
-	width: 400px;
+	width: 450px;
 	margin: 0 auto;
-	font-size: 45px;
+	font-size: 50px;
 	color: #333;
 	font-style: italic;
 }
@@ -45,7 +46,7 @@ h5 {
 }
 h6 {
 	font-size: 35px;
-	color: #bfbdbc;
+	color: $grey;
 	margin: 15px 0 0 50px;
 	font-weight: lighter;
 }	
@@ -69,7 +70,7 @@ h6 {
 	&:after {
 		content: "";
 		position: absolute;
-		bottom: 40px;
+		bottom: 30px;
 		left: 50%;
 		margin-left: -47px;
 		height: 99px;
@@ -84,6 +85,12 @@ h6 {
         height: 100%;
         display: inline-block;
  		float: left;
+ 		&:hover .cycle-prev {
+ 			opacity: 1;
+ 		}
+ 		&:hover .cycle-next {
+ 			opacity: 1;
+ 		}
  		.cycle-prev {
  			position: absolute;
  			left: 0px;
@@ -94,6 +101,8 @@ h6 {
  			background: rgba(#a49e9b, 0.7);
  			z-index: 500;
  			border-left: 4px solid rgba(#666, 0.5);
+ 			opacity: 0;
+ 			transition: opacity .5s ease;
 			&:after {
 				content: "";
 				position: absolute;
@@ -126,6 +135,8 @@ h6 {
  			background: rgba(#a49e9b, 0.7);
  			z-index: 500;
  			border-right: 4px solid rgba(#666, 0.5);
+ 			opacity: 0;
+  			transition: opacity .5s ease;
 			&:after {
 				content: "";
 				position: absolute;
@@ -165,7 +176,7 @@ h6 {
         }
         .caption {
             position: absolute;
-            top: 333px;
+            top: 360px;
             left: 0;
             right: 0;
             margin: 0 auto;
@@ -200,6 +211,9 @@ h6 {
     	}
       	.cycle-pager {
     		color: $purple;
+    		.cycle-pager-active {
+    			color: $brown;
+    		}
     	}
     }
     .testimonials {
@@ -218,24 +232,28 @@ h6 {
             height: 100%;
             width: 100%;
             text-align: center;
-        }        
-        .cycle-pager {
-        	width: 100%;
-            position: absolute;
-            bottom: -10px;
-			text-align: center;
-			letter-spacing: 3px;
-			font-size: 30px;
         }
     }
+}        
+.cycle-pager {
+	width: 100%;
+    position: absolute;
+    bottom: -10px;
+	text-align: center;
+	letter-spacing: 3px;
+	font-size: 30px;
+	.cycle-pager-active {
+		color: #333333;
+	}
 }
+
 .contact-us {
 	height: 830px;
 	background: url(../images/contactbackground.jpg) no-repeat;
 	background-size: cover;
 	text-align: center;
 	p {
-		font-size: 16px;
+		font-size: 18px;
 		color: #3d3d3d;
 		margin-bottom: 80px;
 		font-style: italic;
@@ -246,7 +264,7 @@ h6 {
 		width: 680px;
 		input {
 			font-size: 18px;
-			padding-left: 20px;
+			padding-left: 10px;
 			border: none;
 			letter-spacing: 1.5px;
 		}
@@ -282,10 +300,10 @@ h6 {
 			border: none;
 			resize: none;
 			color: #333;
+			font-size: 18px;
 			&::-webkit-input-placeholder {
 				color: #333;
-				font-size: 16px;
-				letter-spacing: -1px;
+				font-style: bold;
 			}
 		}
 	}
@@ -452,7 +470,7 @@ footer {
 		text-decoration: underline;
 	}
 	.second-child {
-		color: #a7bab5;
+		color: #87a6a3;
 	}
 	.third-child {
 		color: #333;
@@ -465,7 +483,7 @@ footer {
 		color: #5f7a95;
 	}
 	.fifth-child {
-		color: #bfbdbc;
+		color: $grey;
 	}
 	img {
 		float: right;

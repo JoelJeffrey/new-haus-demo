@@ -21,9 +21,9 @@ h2 {
   padding: 100px 0 70px; }
 
 h3 {
-  width: 400px;
+  width: 450px;
   margin: 0 auto;
-  font-size: 45px;
+  font-size: 50px;
   color: #333;
   font-style: italic; }
 
@@ -66,7 +66,7 @@ h6 {
   .center-piece:after {
     content: "";
     position: absolute;
-    bottom: 40px;
+    bottom: 30px;
     left: 50%;
     margin-left: -47px;
     height: 99px;
@@ -80,6 +80,10 @@ h6 {
     height: 100%;
     display: inline-block;
     float: left; }
+    .carousels article:hover .cycle-prev {
+      opacity: 1; }
+    .carousels article:hover .cycle-next {
+      opacity: 1; }
     .carousels article .cycle-prev {
       position: absolute;
       left: 0px;
@@ -89,7 +93,9 @@ h6 {
       border-radius: 0 20px 20px 0;
       background: rgba(164, 158, 155, 0.7);
       z-index: 500;
-      border-left: 4px solid rgba(102, 102, 102, 0.5); }
+      border-left: 4px solid rgba(102, 102, 102, 0.5);
+      opacity: 0;
+      transition: opacity .5s ease; }
       .carousels article .cycle-prev:after {
         content: "";
         position: absolute;
@@ -118,7 +124,9 @@ h6 {
       border-radius: 20px 0 0 20px;
       background: rgba(164, 158, 155, 0.7);
       z-index: 500;
-      border-right: 4px solid rgba(102, 102, 102, 0.5); }
+      border-right: 4px solid rgba(102, 102, 102, 0.5);
+      opacity: 0;
+      transition: opacity .5s ease; }
       .carousels article .cycle-next:after {
         content: "";
         position: absolute;
@@ -151,7 +159,7 @@ h6 {
       top: 20px; }
     .carousels article .caption {
       position: absolute;
-      top: 333px;
+      top: 360px;
       left: 0;
       right: 0;
       margin: 0 auto; }
@@ -178,6 +186,8 @@ h6 {
       color: #83776f; }
     .carousels .awards .cycle-pager {
       color: #97889c; }
+      .carousels .awards .cycle-pager .cycle-pager-active {
+        color: #75685f; }
   .carousels .testimonials {
     width: 50%;
     background: #75685f; }
@@ -192,13 +202,16 @@ h6 {
       height: 100%;
       width: 100%;
       text-align: center; }
-    .carousels .cycle-slideshow .cycle-pager {
-      width: 100%;
-      position: absolute;
-      bottom: -10px;
-      text-align: center;
-      letter-spacing: 3px;
-      font-size: 30px; }
+
+.cycle-pager {
+  width: 100%;
+  position: absolute;
+  bottom: -10px;
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 30px; }
+  .cycle-pager .cycle-pager-active {
+    color: #333333; }
 
 .contact-us {
   height: 830px;
@@ -206,7 +219,7 @@ h6 {
   background-size: cover;
   text-align: center; }
   .contact-us p {
-    font-size: 16px;
+    font-size: 18px;
     color: #3d3d3d;
     margin-bottom: 80px;
     font-style: italic;
@@ -216,7 +229,7 @@ h6 {
     width: 680px; }
     .contact-us .feedback-container input {
       font-size: 18px;
-      padding-left: 20px;
+      padding-left: 10px;
       border: none;
       letter-spacing: 1.5px; }
     .contact-us .feedback-container .name {
@@ -246,11 +259,11 @@ h6 {
       padding: 20px 0 0 20px;
       border: none;
       resize: none;
-      color: #333; }
+      color: #333;
+      font-size: 18px; }
       .contact-us .feedback-container .feedback::-webkit-input-placeholder {
         color: #333;
-        font-size: 16px;
-        letter-spacing: -1px; }
+        font-style: bold; }
   .contact-us button {
     position: relative;
     padding: 8px 50px 8px 30px;
@@ -387,7 +400,7 @@ footer {
     color: #d57058;
     text-decoration: underline; }
   footer .second-child {
-    color: #a7bab5; }
+    color: #87a6a3; }
   footer .third-child {
     color: #333;
     text-decoration: none;
