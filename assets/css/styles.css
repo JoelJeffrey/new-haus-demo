@@ -79,7 +79,7 @@ h6 {
     position: relative;
     height: 100%;
     display: inline-block;
-    margin-left: -4px; }
+    float: left; }
     .carousels article .cycle-prev {
       position: absolute;
       left: 0px;
@@ -180,8 +180,7 @@ h6 {
       color: #97889c; }
   .carousels .testimonials {
     width: 50%;
-    background: #75685f;
-    padding-right: 4px; }
+    background: #75685f; }
     .carousels .testimonials .cycle-pager {
       color: #97889c; }
   .carousels .cycle-slideshow {
