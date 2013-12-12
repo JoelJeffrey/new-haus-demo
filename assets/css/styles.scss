@@ -84,6 +84,70 @@ h6 {
         height: 100%;
         display: inline-block;
  		margin-left: -4px;
+ 		.cycle-prev {
+ 			position: absolute;
+ 			left: 0px;
+ 			bottom: 250px;
+ 			width: 50px;
+ 			height: 40px;
+ 			border-radius: 0 20px 20px 0;
+ 			background: rgba(#a49e9b, 0.7);
+ 			z-index: 500;
+ 			border-left: 4px solid rgba(#666, 0.5);
+			&:after {
+				content: "";
+				position: absolute;
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				background: #fff;
+				right: 5px;
+				top: 5px;
+ 			}
+			.arrow-left {
+				position: absolute;
+				right: 18px;
+				bottom: 12px;
+				width: 0; 
+				height: 0; 
+				border-top: 8px solid transparent;
+				border-bottom: 8px solid transparent;
+				border-right: 8px solid #de7d6d;
+				z-index: 1000;
+			}
+ 		}
+ 		.cycle-next {
+ 			position: absolute;
+ 			right: 0;
+ 			bottom: 250px;
+ 			width: 50px;
+ 			height: 40px;
+ 			border-radius: 20px 0 0 20px;
+ 			background: rgba(#a49e9b, 0.7);
+ 			z-index: 500;
+ 			border-right: 4px solid rgba(#666, 0.5);
+			&:after {
+				content: "";
+				position: absolute;
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				background: #fff;
+				left: 5px;
+				top: 5px;
+ 			}
+			.arrow-right {
+				position: absolute;
+				left: 18px;
+				bottom: 12px;
+				width: 0; 
+				height: 0; 
+				border-top: 8px solid transparent;
+				border-bottom: 8px solid transparent;
+				border-left: 8px solid #de7d6d;
+				z-index: 1000;
+			}
+ 		}
         h2 {
         	padding: 0;
         	font-size: 30px;
@@ -112,6 +176,7 @@ h6 {
     	color: #333;
     	margin-bottom: 30px;
     	text-decoration: underline;
+    	text-transform: uppercase;
     }
     p {
     	font-size: 16px;
