@@ -6,7 +6,16 @@ $green: #87a6a3;
 $yellow: #faf7b1;
 $orange: #d57058;
 $blue: #5f7a95;
-
+@-webkit-keyframes rollAndRotate {
+    0%, 100% {
+        -webkit-transform: rotate(0deg);
+        right: 0;
+    }
+    50% {
+        -webkit-transform: rotate(-360deg);
+        right: 75%;
+    }
+}
 * {
 	padding: 0;
 	margin: 0;
@@ -23,11 +32,6 @@ h2 {
 	font-size: 70px;
 	color: $grey;
 	font-weight: 200;
-}
-h3 {
-	font-size: 50px;
-	color: #333;
-	font-style: italic;
 }
 h4 {
 	font-size: 22px;
@@ -63,11 +67,23 @@ section { text-align: center; }
     top: 105px;
     left: 50%;
     margin-left: -240px;
-    transition: top 0.3s;
+
+    transition: all 0.3s;
+
     &:hover {
-    	top: 30px;
+    	top: 85px;
     	box-shadow: 0px 3px 25px $green;
     }
+    &:hover h3 {
+    	-webkit-transform: scale(1.1);
+    }
+	h3 {
+		font-size: 50px;
+		color: #333;
+		font-style: italic;
+		font-weight: 600;
+		transition: all 0.6s;
+	}
 }
 .carousels {
 	height: 600px;
@@ -100,8 +116,6 @@ section { text-align: center; }
     	text-decoration: underline;
     	text-transform: uppercase;
     }
-  	.cycle-pager { color: $purple; }
-
     .press {
     	width: 25%;
     	background: $purple;
@@ -178,7 +192,8 @@ section { text-align: center; }
 		width: 100%;
 	    position: absolute;
 	    bottom: -10px;
-		letter-spacing: 3px;
+	    color: $purple;
+		letter-spacing: 7px;
 		font-size: 30px;
 		.cycle-pager-active { color: #333333; }
 	}
@@ -193,40 +208,43 @@ section { text-align: center; }
 		font-style: italic;
 	}
 	.feedback-container {
-		margin: 80px auto 0;
-		width: 680px;
+			margin: 80px auto 0;
+			width: 700px;
 		input, textarea {
-			padding: 10px;
-			border: none;
-			font-size: 18px;
+			padding: 10px 0 0 30px;
+			font-size: 16px;
+			transition: all 0.3s;
+			outline: none;
+			&:hover {
+				box-shadow: 12px 12px;
+			}
 		}
 		.name, .personal-contact {
-			height: 70px;
-			width: 310px;
+			height: 55px;
+			width: 290px;
 			margin-bottom: 40px;
-			letter-spacing: 1.5px;
 		}
 		.name {
 			color: #de7d6d;
 			float: left;
-			box-shadow: 6px 6px 0 rgba(206, 128, 115, 0.75);
+			box-shadow: 4px 4px rgb(232, 127, 111);
 			&::-webkit-input-placeholder {
 				color: rgb(206, 128, 115);
 			}
 		}
 		.personal-contact {
 			float: right;
-			box-shadow: 6px 6px 0 rgba(134, 123, 116, 0.75);
+			box-shadow: 4px 4px 0 rgb(119, 105, 96);
 			color: rgb(134, 123, 116);
 			&::-webkit-input-placeholder {
 				color: rgb(134, 123, 116);
 			}
 		}
 		.feedback {
-			width: 660px;
-			height: 180px;
+			width: 665px;
+			height: 140px;
 			margin-bottom: 80px;
-			box-shadow: 6px 6px 0 rgba(66, 66, 66, 0.75);
+			box-shadow: 4px 4px 0 rgba(33, 33, 33, 0.9);
 			resize: none;
 			color: #333;
 			padding-top: 20px;
@@ -236,39 +254,58 @@ section { text-align: center; }
 		}
 	}
 	button {
-		position: relative;
-		padding: 8px 50px 8px 30px;
+		width: 200px;
+		background-color: #454545;
 		border-radius: 50px;
-		background: rgba(33, 33, 33, 0.6);
-		border: none;
-		font-size: 20px;
-		letter-spacing: 1.5px;
-		text-transform: uppercase;
+		margin: 0 auto;
+		height: 50px;
+		cursor: pointer;
+		position: relative;
 		outline: none;
-		a {
-			color: #fff;
-			text-decoration: none;
+		border: none;
+		&:hover span{
+			color: $orange;
 		}
-	}
-	span:after {
-		content: "";
-		position: absolute;
-		width: 30px;
-		height: 30px;
-		border-radius: 50%;
-		background: #fff;
-		right: 5px;
-		top: 5px;
-	}
-	.arrow-right {
-		position: absolute;
-		right: 13px;
-		bottom: 12px;
-		width: 0; 
-		height: 0; 
-		border-top: 8px solid transparent;
-		border-bottom: 8px solid transparent;
-		border-left: 8px solid #de7d6d;
+		span {
+			font-size: 22px;
+			text-transform: uppercase;
+			color: #fff;
+			left: 40px;
+			top: 13px;
+			letter-spacing: 3px;
+			position: absolute;
+		}
+		.dial {
+			text-decoration: none;
+			box-shadow: inset 0px 0px 2px #888;
+			color: #fff;
+			height: 40px;
+			width: 40px;
+			border-radius: 30px;
+			margin: 5px;
+			background-color: #fff;
+			display: inline-block;
+			position: absolute;
+			right: 0;
+			top: 0;
+			&:hover{
+				-webkit-animation-name: rollAndRotate;
+				-webkit-animation-duration: 1s;
+				-webkit-animation-iteration-count: 1;
+
+				-webkit-animation: rollAndRotate, 1s, ease, 1;
+			}
+			.arrow-right {
+				width: 0;
+				height: 0;
+				border-top: 10px solid transparent;
+				border-bottom: 8px solid transparent;
+				border-left: 10px solid $orange;
+				border-radius: 20%;
+				top: 11px;
+				left: 17px;
+			}
+		}
 	}
 }
 .location {
@@ -283,6 +320,18 @@ section { text-align: center; }
 		background: #fff;
 		margin: 0 auto;
 		letter-spacing: 1.5px;
+		&:hover .border-top {
+			background: $purple;
+		}
+		&:hover .border-left {
+			background: $yellow;
+		}
+		&:hover .border-bottom {
+			background: $green;
+		}
+		&:hover .border-right {
+			background: $brown;
+		}
 		.bubble {
 			height: 100px;
 			width: 100px;
@@ -319,6 +368,9 @@ section { text-align: center; }
 		}
 		span {
 			position: absolute;
+		}
+		.border-top, .border-left, .border-bottom, .border-right {
+			-webkit-animation: all 1s;
 		}
 		.border-top {
 			top: 0;
@@ -363,43 +415,33 @@ section { text-align: center; }
 }
 footer {
 	height: 60px;
-	ul {
-		li {
-			display: inline;
-			font-size: 20px;
-			padding: 0 60px 0 40px;
-			line-height: 60px;
-			text-transform: uppercase;
-			a { text-decoration: none; }
-			a:after {
-				content: ">>";
-				position: relative;
-				left: 6px;
-				bottom: 2px;
-				font-size: 10px;
-			}
-			&:nth-child(1) a {
-				color: #d57058;
-				&:after { color: $green; }
-			}
-			&:nth-child(2) a {
-				color: $green;
-				&:after { color: $orange; }
-			}
-			&:nth-child(3) a {
-				color: #333;
-				background: #fff;
-				padding: 20px;
-				&:after { content: none; }
-			}
-			&:nth-child(4) a {
-				color: $blue;
-				&:after { color: $grey; }
-			}
-			&:nth-child(5) a {
-				color: $grey;
-				&:after { color: $brown; }
-			}
+	li {
+		display: inline;
+		font-size: 20px;
+		padding: 0 60px 0 40px;
+		line-height: 60px;
+		text-transform: uppercase;
+		&:after {
+			content: ">>";
+			position: relative;
+			left: 6px;
+			bottom: 2px;
+			font-size: 9px;
+		}
+		&:nth-child(1) a {
+			color: $orange;
+		}
+		&:nth-child(2) a {
+			color: $green;
+		}
+		&:nth-child(3) a {
+			color: $purple;
+		}
+		&:nth-child(4) a {
+			color: $blue;
+		}
+		&:nth-child(5) a {
+			color: $grey;
 		}
 	}
 	img {
