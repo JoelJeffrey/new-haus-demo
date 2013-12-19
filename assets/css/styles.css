@@ -238,6 +238,8 @@ section {
     border: none; }
     .contact-us button:hover span {
       color: #d57058; }
+    .contact-us button:hover .dial {
+      -webkit-animation: rollAndRotate, 1s, ease, 1; }
     .contact-us button span {
       font-size: 22px;
       text-transform: uppercase;
@@ -259,11 +261,6 @@ section {
       position: absolute;
       right: 0;
       top: 0; }
-      .contact-us button .dial:hover {
-        -webkit-animation-name: rollAndRotate;
-        -webkit-animation-duration: 1s;
-        -webkit-animation-iteration-count: 1;
-        -webkit-animation: rollAndRotate, 1s, ease, 1; }
       .contact-us button .dial .arrow-right {
         width: 0;
         height: 0;
@@ -293,6 +290,8 @@ section {
       background: #87a6a3; }
     .location .business-card:hover .border-right {
       background: #75685f; }
+    .location .business-card:hover .bubble {
+      top: -30px; }
     .location .business-card .bubble {
       height: 100px;
       width: 100px;
@@ -301,7 +300,8 @@ section {
       top: -20px;
       right: 50px;
       z-index: 5;
-      line-height: 100px; }
+      line-height: 100px;
+      transition: all 0.5s; }
       .location .business-card .bubble a {
         color: #fff;
         text-transform: uppercase; }
@@ -324,7 +324,7 @@ section {
     .location .business-card span {
       position: absolute; }
     .location .business-card .border-top, .location .business-card .border-left, .location .business-card .border-bottom, .location .business-card .border-right {
-      -webkit-animation: all 1s; }
+      transition: background 0.5s; }
     .location .business-card .border-top {
       top: 0;
       left: 0;

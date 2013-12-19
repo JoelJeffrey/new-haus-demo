@@ -266,6 +266,9 @@ section { text-align: center; }
 		&:hover span{
 			color: $orange;
 		}
+		&:hover .dial{
+			-webkit-animation: rollAndRotate, 1s, ease, 1;
+		}
 		span {
 			font-size: 22px;
 			text-transform: uppercase;
@@ -288,13 +291,6 @@ section { text-align: center; }
 			position: absolute;
 			right: 0;
 			top: 0;
-			&:hover{
-				-webkit-animation-name: rollAndRotate;
-				-webkit-animation-duration: 1s;
-				-webkit-animation-iteration-count: 1;
-
-				-webkit-animation: rollAndRotate, 1s, ease, 1;
-			}
 			.arrow-right {
 				width: 0;
 				height: 0;
@@ -332,6 +328,9 @@ section { text-align: center; }
 		&:hover .border-right {
 			background: $brown;
 		}
+		&:hover .bubble {
+			top: -30px;
+		}
 		.bubble {
 			height: 100px;
 			width: 100px;
@@ -341,6 +340,7 @@ section { text-align: center; }
 			right: 50px;
 			z-index: 5;
 			line-height: 100px;
+			transition: all 0.5s;
 			a {
 				color: #fff;
 				text-transform: uppercase;
@@ -370,7 +370,7 @@ section { text-align: center; }
 			position: absolute;
 		}
 		.border-top, .border-left, .border-bottom, .border-right {
-			-webkit-animation: all 1s;
+			transition: background 0.5s;
 		}
 		.border-top {
 			top: 0;
